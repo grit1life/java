@@ -1,2 +1,3 @@
 module javaPractice {
+	requires itextpdf;
 }
