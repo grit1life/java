@@ -3,6 +3,7 @@ package iter;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
 
 import vo.Member;
 
@@ -35,7 +36,10 @@ public class IterPractice {
 		for(Member info : mList) {
 			System.out.printf("%s, %s, %d\n", info.getName(), info.getId(), info.getAge());
 		}
+		System.out.println();
 		
+		Stream<Member> stream = mList.stream();
+		stream.forEach((e)->System.out.printf("%s, %s, %d\n", e.getName(), e.getId(), e.getAge()));
 	}
 
 }
